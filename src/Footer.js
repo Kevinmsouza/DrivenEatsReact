@@ -1,10 +1,10 @@
 export default function Footer() {
     return (
-        <div class="footer">
-            <button class="botao" disabled>
+        <footer>
+            <button className="botao" disabled>
                 Selecione os 3 itens
                 para fechar o pedido
             </button>
-        </div>
+        </footer>
     )
 }
