@@ -6,7 +6,7 @@ const DATA = [
         itens: [
             {
                 image: [
-                    "images/lasanha-carne.jpg",
+                    "./images/lasanha-carne.jpg",
                     "Foto de uma lasanha à bolonhesa"
                 ],
                 name: "Lasanha Bolonhesa",
@@ -15,7 +15,7 @@ const DATA = [
             },
             {
                 image: [
-                    "images/frango-empanado.jpg",
+                    "./images/frango-empanado.jpg",
                     "Foto de uma porção de frango empanado"
                 ],
                 name: "Frango empanado",
@@ -24,7 +24,7 @@ const DATA = [
             },
             {
                 image: [
-                    "images/Macarrão-rustico.jpg"
+                    "./images/Macarrão-rustico.jpg"
                     ,
                     "Foto de um prato de macarrão ao molho rústico"
                 ],
@@ -34,7 +34,7 @@ const DATA = [
             },
             {
                 image: [
-                    "images/lasanha-carne.jpg",
+                    "./images/lasanha-carne.jpg",
                     "Foto de uma lasanha à bolonhesa"
                 ],
                 name: "Lasanha Bolonhesa+",
@@ -43,7 +43,7 @@ const DATA = [
             },
             {
                 image: [
-                    "images/banana.jpg",
+                    "./images/banana.jpg",
                     "Foto de um cacho de banana"
                 ],
                 name: "Banana",
@@ -57,7 +57,7 @@ const DATA = [
         itens: [
             {
                 image: [
-                    "images/pepsi-lata.jpg",
+                    "./images/pepsi-lata.jpg",
                     "Foto de uma lata de Pepsi"
                 ],
                 name: "Pepsi lata",
@@ -66,7 +66,7 @@ const DATA = [
             },
             {
                 image: [
-                    "images/laranja.jpg",
+                    "./images/laranja.jpg",
                     "Foto de um copo de suco de laranja"
                 ],
                 name: "Suco de laranja",
@@ -75,7 +75,7 @@ const DATA = [
             },
             {
                 image: [
-                    "images/abacaxi.jpg",
+                    "./images/abacaxi.jpg",
                     "Foto de um copo de suco de abacaxi"
                 ],
                 name: "Suco de abacaxi",
@@ -84,7 +84,7 @@ const DATA = [
             },
             {
                 image: [
-                    "images/agua.jpg",
+                    "./images/agua.jpg",
                     "Foto de uma garrafa d'agua"
                 ],
                 name: "Garrafa d'agua",
@@ -98,7 +98,7 @@ const DATA = [
         itens: [
             {
                 image: [
-                    "images/bombom.jpg",
+                    "./images/bombom.jpg",
                     "Imagem de varios bombons sonho de valsa"
                 ],
                 name: "Bombom sonho de valsa",
@@ -107,7 +107,7 @@ const DATA = [
             },
             {
                 image: [
-                    "images/bolo-tentador.jpg",
+                    "./images/bolo-tentador.jpg",
                     "Foto de um bolo de chocolate cremoso"
                 ],
                 name: "Bolo tentador",
@@ -116,7 +116,7 @@ const DATA = [
             },
             {
                 image: [
-                    "images/pudim.jpg",
+                    "./images/pudim.jpg",
                     "Foto de um pudim de leite condensado"
                 ],
                 name: "Pudim",
@@ -125,7 +125,7 @@ const DATA = [
             },
             {
                 image: [
-                    "images/cupcake.jpg",
+                    "./images/cupcake.jpg",
                     "Imagem de cupcake"
                 ],
                 name: "Cupcake",
