@@ -1,8 +1,9 @@
-import Item from "./Item"
+import Item from "./Item";
 
 export default function({title, itens}) {
+
     return (
-        <div className="category prato">
+        <div className="category">
                 <h2 className="title">{title}</h2>
                 <ul className="menu">
                     {itens.map((item, i) => {

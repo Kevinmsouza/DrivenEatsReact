@@ -1,13 +1,39 @@
-export default function Item({image: [img, alt], name, description, price}) {
+import React from "react";
+
+export default function Item({ image: [img, alt], name, description, price }) {
+
+    const [qtd, setQtd] = React.useState(0);
+    function plus() { 
+        setQtd(qtd + 1);
+        console.log(qtd)
+    }
+    function minus() { 
+        setQtd(qtd - 1);
+    }
+
+
     return (
-        <li className="item">
+        <li className={`item ${qtd > 0 ? "selected" : ""}`} onClick={()=> {if(qtd === 0){ plus()}}} >
             <img src={img} alt={alt} />
             <h3>{name}</h3>
             <p>{description}</p>
             <p className="price">R$ {price.toFixed(2).replace(".", ",")}</p>
-            <div className="check-mark hidden">
-                <ion-icon name="checkmark-circle"></ion-icon>
-            </div>
+            <Counter
+                qtd={qtd}
+                plus={plus}
+                minus={minus}
+            />
         </li>
+    )
+}
+
+function Counter({qtd, plus, minus}) {
+
+    return (
+        <div className={`counter ${ qtd > 0 ? "" : "hidden"} `}>
+            <span className="minus" onClick={minus}>-</span>
+            {qtd} 
+            <span className="plus" onClick={plus}>+</span>
+        </div>
     )
 }
