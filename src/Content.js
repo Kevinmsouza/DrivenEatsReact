@@ -1,142 +1,145 @@
+import Category from "./Category"
 
+const DATA = [
+    {
+        title: "Primeiro, seu prato",
+        itens: [
+            {
+                image: [
+                    "images/lasanha-carne.jpg",
+                    "Foto de uma lasanha à bolonhesa"
+                ],
+                name: "Lasanha Bolonhesa",
+                description: "Massa e Carne moída com molho da casa",
+                price: 20.00
+            },
+            {
+                image: [
+                    "images/frango-empanado.jpg",
+                    "Foto de uma porção de frango empanado"
+                ],
+                name: "Frango empanado",
+                description: "Crocante por fora, delicioso por dentro",
+                price: 10.00
+            },
+            {
+                image: [
+                    "images/Macarrão-rustico.jpg"
+                    ,
+                    "Foto de um prato de macarrão ao molho rústico"
+                ],
+                name: "Marcarrão rústico",
+                description: "O sabor caseiro, hmmmmm",
+                price: 10.99
+            },
+            {
+                image: [
+                    "images/lasanha-carne.jpg",
+                    "Foto de uma lasanha à bolonhesa"
+                ],
+                name: "Lasanha Bolonhesa+",
+                description: "+Massa e +Carne moída com +molho da casa",
+                price: 20.99
+            },
+            {
+                image: [
+                    "images/banana.jpg",
+                    "Foto de um cacho de banana"
+                ],
+                name: "Banana",
+                description: "Isso mesmo... Apenas UMA banana",
+                price: 0.99
+            }
+        ]
+    },
+    {
+        title: "Agora, sua bebida",
+        itens: [
+            {
+                image: [
+                    "images/pepsi-lata.jpg",
+                    "Foto de uma lata de Pepsi"
+                ],
+                name: "Pepsi lata",
+                description: "350ml",
+                price: 4.00
+            },
+            {
+                image: [
+                    "images/laranja.jpg",
+                    "Foto de um copo de suco de laranja"
+                ],
+                name: "Suco de laranja",
+                description: "400ml",
+                price: 5.00
+            },
+            {
+                image: [
+                    "images/abacaxi.jpg",
+                    "Foto de um copo de suco de abacaxi"
+                ],
+                name: "Suco de abacaxi",
+                description: "400ml",
+                price: 5.00
+            },
+            {
+                image: [
+                    "images/agua.jpg",
+                    "Foto de uma garrafa d'agua"
+                ],
+                name: "Garrafa d'agua",
+                description: "500ml",
+                price: 2.00
+            }
+        ]
+    },
+    {
+        title: "Por fim, sua sobremesa",
+        itens: [
+            {
+                image: [
+                    "images/bombom.jpg",
+                    "Imagem de varios bombons sonho de valsa"
+                ],
+                name: "Bombom sonho de valsa",
+                description: "O classico sabor do bombom",
+                price: 1.50
+            },
+            {
+                image: [
+                    "images/bolo-tentador.jpg",
+                    "Foto de um bolo de chocolate cremoso"
+                ],
+                name: "Bolo tentador",
+                description: "Um bolo de chocolate com camadas de recheio cremoso",
+                price: 50.00
+            },
+            {
+                image: [
+                    "images/pudim.jpg",
+                    "Foto de um pudim de leite condensado"
+                ],
+                name: "Pudim",
+                description: "Um pudim de leite condensado inteiro para você destruir",
+                price: 22.00
+            },
+            {
+                image: [
+                    "images/cupcake.jpg",
+                    "Imagem de cupcake"
+                ],
+                name: "Cupcake",
+                description: "Para aqueles na dieta, que ainda querem um bolinho",
+                price: 4.00
+            }
+        ]
+    }
+];
 
 export default function Content() {
     return (
-        <div class="content">
-            <div class="category prato">
-                <h2 class="title">Primeiro, seu prato</h2>
-                <ul class="menu">
-                    <li class="item" onclick="selecionarPrato(this)">
-                        <img src="images/lasanha-carne.jpg" alt="Foto de uma lasanha à bolonhesa"/>
-                        <h3>Lasanha Bolonhesa</h3>
-                        <p>Massa e Carne moída com molho da casa</p>
-                        <p class="price">R$ 20,00</p>
-                        <div class="check-mark hidden">
-                            <ion-icon name="checkmark-circle"></ion-icon>
-                        </div>
-                    </li>
-                    <li class="item" onclick="selecionarPrato(this)">
-                        <img src="images/frango-empanado.jpg" alt="Foto de uma porção de frango empanado"/>
-                        <h3>Frango empanado</h3>
-                        <p>Crocante por fora, delicioso por dentro</p>
-                        <p class="price">R$ 11,00</p>
-                        <div class="check-mark hidden">
-                            <ion-icon name="checkmark-circle"></ion-icon>
-                        </div>
-                    </li>
-                    <li class="item" onclick="selecionarPrato(this)">
-                        <img src="images/Macarrão-rustico.jpg"
-                         alt="Foto de um prato de macarrão ao molho rústico"/>
-                        <h3>Marcarrão rústico</h3>
-                        <p>O sabor caseiro, hmmmmm</p>
-                        <p class="price">R$ 16,99</p>
-                        <div class="check-mark hidden">
-                            <ion-icon name="checkmark-circle"></ion-icon>
-                        </div>
-                    </li>
-                    <li class="item" onclick="selecionarPrato(this)">
-                        <img src="images/lasanha-carne.jpg" alt="Foto de uma lasanha à bolonhesa"/>
-                        <h3>Lasanha Bolonhesa+</h3>
-                        <p>+Massa e +Carne moída com +molho da casa</p>
-                        <p class="price">R$ 29,99</p>
-                        <div class="check-mark hidden">
-                            <ion-icon name="checkmark-circle"></ion-icon>
-                        </div>
-                    </li>
-                    <li class="item" onclick="selecionarPrato(this)">
-                        <img src="images/banana.jpg" alt="Foto de um cacho de banana"/>
-                        <h3>Banana</h3>
-                        <p>Isso mesmo... Apenas UMA banana</p>
-                        <p class="price">R$ 0,99</p>
-                        <div class="check-mark hidden">
-                            <ion-icon name="checkmark-circle"></ion-icon>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="category bebida">
-                <h2 class="title">Agora, sua bebida</h2>
-                <ul class="menu">
-                    <li class="item" onclick="selecionarBebida(this)">
-                        <img src="images/pepsi-lata.jpg" alt="Foto de uma lata de Pepsi"/>
-                        <h3>Pepsi lata</h3>
-                        <p>350ml</p>
-                        <p class="price">R$ 4,00</p>
-                        <div class="check-mark hidden">
-                            <ion-icon name="checkmark-circle"></ion-icon>
-                        </div>
-                    </li>
-                    <li class="item" onclick="selecionarBebida(this)">
-                        <img src="images/laranja.jpg" alt="Foto de um copo de suco de laranja"/>
-                        <h3>Suco de laranja</h3>
-                        <p>400ml</p>
-                        <p class="price">R$ 5,00</p>
-                        <div class="check-mark hidden">
-                            <ion-icon name="checkmark-circle"></ion-icon>
-                        </div>
-                    </li>
-                    <li class="item" onclick="selecionarBebida(this)">
-                        <img src="images/abacaxi.jpg" alt="Foto de um copo de suco de abacaxi"/>
-                        <h3>Suco de abacaxi</h3>
-                        <p>400ml</p>
-                        <p class="price">R$ 5,00</p>
-                        <div class="check-mark hidden">
-                            <ion-icon name="checkmark-circle"></ion-icon>
-                        </div>
-                    </li>
-                    <li class="item" onclick="selecionarBebida(this)">
-                        <img src="images/agua.jpg" alt="Foto de uma garrafa d'agua"/>
-                        <h3>Garrafa d'agua</h3>
-                        <p>500ml</p>
-                        <p class="price">R$ 2,00</p>
-                        <div class="check-mark hidden">
-                            <ion-icon name="checkmark-circle"></ion-icon>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="category sobremesa">
-                <h2 class="title">Por fim, sua sobremesa</h2>
-                <ul class="menu">
-                    <li class="item" onclick="selecionarSobremesa(this)">
-                        <img src="images/bombom.jpg" alt="Imagem de varios bombons sonho de valsa"/>
-                        <h3>Bombom sonho de valsa</h3>
-                        <p>O classico sabor do bombom</p>
-                        <p class="price">R$ 1,50</p>
-                        <div class="check-mark hidden">
-                            <ion-icon name="checkmark-circle"></ion-icon>
-                        </div>
-                    </li>
-                    <li class="item" onclick="selecionarSobremesa(this)">
-                        <img src="images/bolo-tentador.jpg" alt="Foto de um bolo de chocolate cremoso"/>
-                        <h3>Bolo tentador</h3>
-                        <p>Um bolo de chocolate com camadas de recheio cremoso</p>
-                        <p class="price">R$ 50,00</p>
-                        <div class="check-mark hidden">
-                            <ion-icon name="checkmark-circle"></ion-icon>
-                        </div>
-                    </li>
-                    <li class="item" onclick="selecionarSobremesa(this)">
-                        <img src="images/pudim.jpg" alt="Foto de um pudim de leite condensado"/>
-                        <h3>Pudim</h3>
-                        <p>Um pudim de leite condensado inteiro para você destruir</p>
-                        <p class="price">R$ 22,00</p>
-                        <div class="check-mark hidden">
-                            <ion-icon name="checkmark-circle"></ion-icon>
-                        </div>
-                    </li>
-                    <li class="item" onclick="selecionarSobremesa(this)">
-                        <img src="images/cupcake.jpg" alt="Imagem de cupcake"/>
-                        <h3>cupcake</h3>
-                        <p>Para aqueles na dieta, que ainda querem um bolinho</p>
-                        <p class="price">R$ 4,00</p>
-                        <div class="check-mark hidden">
-                            <ion-icon name="checkmark-circle"></ion-icon>
-                        </div>
-                    </li>
-                    
-                </ul>
-            </div>
+        <div className="content">
+            {DATA.map((category, index) => <Category title={category.title} itens={category.itens} key={index} />)}
         </div>
     )
 }
