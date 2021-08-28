@@ -1,9 +1,10 @@
-export default function Footer() {
+export default function Footer({isEnable}) {
+    
+
     return (
         <footer>
-            <button disabled>
-                Selecione os 3 itens
-                para fechar o pedido
+            <button disabled={!isEnable} >
+                <p>{isEnable ? "Fechar pedido" : "Selecione os 3 itens para fechar o pedido"}</p>
             </button>
         </footer>
     )

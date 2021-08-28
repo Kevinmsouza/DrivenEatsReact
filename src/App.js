@@ -155,18 +155,38 @@ export default function App() {
             })
         )
     }));
-    
+    const [enableFinish, setEnableFinish] = React.useState([false, false, false])
+
     function editShopCart(categoryIndex, itemIndex, qtd){
-        let newList = [...shopCart];
-        newList[categoryIndex][itemIndex].qtd = qtd;
-        setShopCart(newList);
+        let newShopList = [...shopCart];
+        newShopList[categoryIndex][itemIndex].qtd = qtd;
+        setShopCart(newShopList);
+        let newFinishCheck = [...enableFinish];
+        newFinishCheck[categoryIndex] = lookCategory(newShopList[categoryIndex]);
+        setEnableFinish(newFinishCheck);
+    }
+    function lookCategory(categoryItens) {
+        for (let i = 0; i < categoryItens.length; i++) {
+            if (categoryItens[i].qtd > 0) {
+                return true;
+            }
+        }
+        return false;
+    }
+    function enableButton(){
+        for (let i = 0; i < enableFinish.length; i++) {
+            if(enableFinish[i] === false){
+                return false;
+            }
+        }
+        return true;
     }
 
     return (
         <>
             <Header />
             <Content DATA={DATA} editShopCart={editShopCart} />
-            <Footer />
+            <Footer isEnable={enableButton()} />
         </>
     )
 }
