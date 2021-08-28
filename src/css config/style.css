@@ -101,7 +101,7 @@ header p {
 .hidden{
     display: none;
 }
-.selecionado {
+.selected {
     box-shadow: inset 0px 0px 0px 5px #32B72F;
 }
 /* Fim do conteudo */
@@ -119,16 +119,18 @@ footer {
     bottom: 0;
     z-index: 10;
 }
-footer .botao{
+footer button{
     border: none;
-    background-color: #CBCBCB;
+    background-color: #32B72F;
     color: #FFF;
     width: 94%;
     height: 61px;
     border-radius: 50px;
     font-size: 20px;
-}
-footer .final{
-    background-color: #32B72F;
     font-weight: 700;
+}
+footer button:disabled{
+    font-weight: 400;
+    background-color: #CBCBCB;
+    
 }
