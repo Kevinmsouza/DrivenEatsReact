@@ -186,7 +186,7 @@ export default function App() {
         <>
             <Header />
             <Content DATA={DATA} editShopCart={editShopCart} />
-            <Footer isEnable={enableButton()} />
+            <Footer isEnable={enableButton()} shopCart={shopCart} />
         </>
     )
 }
