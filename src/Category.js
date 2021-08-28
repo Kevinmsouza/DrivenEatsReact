@@ -1,6 +1,6 @@
 import Item from "./Item";
 
-export default function({title, itens}) {
+export default function Category({title, itens, categoryIndex, editShopCart}) {
 
     return (
         <div className="category">
@@ -13,6 +13,9 @@ export default function({title, itens}) {
                                 name={item.name}
                                 description={item.description}
                                 price={item.price}
+                                categoryIndex={categoryIndex}
+                                itemIndex={i}
+                                editShopCart={editShopCart}
                                 key={i}
                             /> 
                         )

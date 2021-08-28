@@ -1,19 +1,25 @@
 import React from "react";
+import Category from "./Category";
 
-export default function Item({ image: [img, alt], name, description, price }) {
+export default function Item({ image: [img, alt], name, description, price, itemIndex, categoryIndex, editShopCart}) {
 
     const [qtd, setQtd] = React.useState(0);
     function plus() { 
         setQtd(qtd + 1);
-        console.log(qtd)
+        editShopCart(categoryIndex, itemIndex, qtd + 1)
     }
     function minus() { 
         setQtd(qtd - 1);
+        editShopCart(categoryIndex, itemIndex, qtd - 1)
+    }
+    function select() {
+        if(qtd === 0){
+             plus()
+        }
     }
 
-
     return (
-        <li className={`item ${qtd > 0 ? "selected" : ""}`} onClick={()=> {if(qtd === 0){ plus()}}} >
+        <li className={`item ${qtd > 0 ? "selected" : ""}`} onClick={select} >
             <img src={img} alt={alt} />
             <h3>{name}</h3>
             <p>{description}</p>
