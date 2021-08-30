@@ -2,7 +2,6 @@
 export default function Footer({isEnable, shopCart}) {
     function sendMessage(){
         const message = formatMessage()
-        console.log(message)
         const whatsLink = `https://wa.me/+556696846194?text=${encodeURIComponent(message)}`
         window.location.assign(whatsLink)
     }
